@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Expense Tracker</h1>
+     
+    </header>
+
+    <section id="expense-form">
+      <input type="text" id="description" placeholder="Description" required />
+      <input type="number" id="amount" placeholder="Amount" required />
+      <input type="date" id="date" required />
+      <select id="category">
+        <option>Food</option>
+        <option>Transport</option>
+        <option>Shopping</option>
+        <option>Health</option>
+        <option>Other</option>
+      </select>
+      <button id="add-btn">Add Expense</button>
+    </section>
+
+    <section id="filters">
+      <input type="text" id="search" placeholder="Search..." />
+      <select id="filter-category">
+        <option value="">All Categories</option>
+        <option>Food</option>
+        <option>Transport</option>
+        <option>Shopping</option>
+        <option>Health</option>
+        <option>Other</option>
+      </select>
+      <input type="month" id="filter-month" />
+    </section>
+
+    <section id="summary">
+      <h3>Total: ₹<span id="total">0</span></h3>
+      <button id="export-btn">Export to CSV</button>
+    </section>
+
+    <section id="expense-list"></section>
+
+    <canvas id="categoryChart"></canvas>
+    <canvas id="monthlyChart"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
